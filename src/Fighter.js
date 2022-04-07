@@ -30,7 +30,7 @@ class Fighter {
   getDamage() {
     return this.weapon ?
       this.strength + this.weapon.damage :
-      this.strength
+      this.strength;
   }
 
 
@@ -59,6 +59,6 @@ class Fighter {
   * @returns Boolean
   */
   isAlive() {
-    return this.life > 0
+    return this.life > 0;
   }
 }

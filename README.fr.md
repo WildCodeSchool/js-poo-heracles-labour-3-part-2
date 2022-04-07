@@ -4,20 +4,20 @@ Prérequis : cloner ce *repository*.
 
 
 > Rappel => Dans cette nouvelle épreuve, nous intégrons une interface HTML pour améliorer notre jeu.
-Tu trouveras donc un fichier *index.html* et un fichier *style.css* lié. En bas du index.html, tu trouveras les imports des différents fichiers *js*. Attention, l'ordre est important.
+Tu trouveras donc un fichier *index.html* et un fichier *style.css* lié. En bas du *index.html*, tu trouveras les imports des différents fichiers *js*. Attention, l'ordre est important.
 Dans le fichier *index.html*, il n'y a presque rien. Les templates html sont préparés et injectés directement, au fur et à mesure de l'implémentation des objets. Tu peux les parcourir mais n'a pas besoin d'y toucher pour le fonctionnement du workshop. Tu seras par contre amener à consommer certaines de ses fonctionnalités.
 
 > La zone `Hero` du HTML est directement crée à partir du *index.js (ligne 18 à 20)*.
 
 ## Rappel part 1
 
-> Dans la première partie du workshop, nous avons intégré nos `Fighter` à notre `Arena`. Pour cela, nous appris l'héritage pour nos `Hero` et `Monster`.
+> Dans la première partie du workshop, nous avons intégré nos `Fighter` à notre `Arena`. Pour cela, nous appris l'héritage pour nos `Hero` et `Monster`. Tout est fait et en place (correction)
 
 
 
 ## Garder ses distances
 
-> Maintenant que les combattants ont tous une position, essayons d'exploiter cette nouvelle information. Tout d'abord, il serait intéressant de connaître la distance entre le héros et chacun des monstres.
+> Maintenant que les combattants ont tous une position, essayons d'exploiter cette nouvelle information. Tout d'abord, il serait intéressant de connaître la distance entre le `héros` et chacun des `monstres`.
 
 - Rappel : Pour calculer la distance entre deux points A et B sur une carte, cela revient à appliquer la formule suivante (qui n'est ni plus ni moins que le théorème de pythagore).
 
@@ -29,7 +29,7 @@ Créer une méthode `getDistance()` dans Arena prenant 2 objets `Fighter` en par
 
 - Maintenant que tu peux calculer un éloignement, ajoute la notion de "portée" aux attaques. De base, un combattant sans arme ne devrait pas pouvoir frapper plus loin qu'un adversaire sur une case adjacente. Ajoute à `Fighter` la propriété `range` (float à 1 par défaut) et la méthode `getRange()` (qui retournera la valeur de la propriété range).
 
-- Dans `Arena`, créé une méthode `isTouchable()` prenant en 1er paramètre l'attaquant et en second l'attaqué. Cette méthode doit renvoyer `true` si l'attaqué est à portée de l'attaquant, c'est-à-dire si ça distance entre les deux combattants est bien inférieure ou égale à la portée (*propriété range*) de l'attaquant. Une fois cela fait, actualise. Tu devrais voir apparaître en couleur les oiseaux à portée d'Héraclès, et en grisé ceux qui ne le sont pas. N'hésite pas à modifier les coordonnées du héro pour faire varier les distances.
+- Dans `Arena`, créé une méthode `isTouchable()` prenant en 1er paramètre l'attaquant et en second l'attaqué. Cette méthode doit renvoyer `true` si l'attaqué est à portée de l'attaquant, c'est-à-dire si ça distance entre les deux combattants est bien inférieure ou égale à la portée (*utilise getRange()*) de l'attaquant. Une fois cela fait, actualise. Tu devrais voir apparaître en couleur les oiseaux à portée d'Héraclès, et en grisé ceux qui ne le sont pas. N'hésite pas à modifier les coordonnées du héro pour faire varier les distances.
 
 - Ajoute ensuite une propriété `range` (float à 0.5 par défaut) sur les armes.
 

@@ -19,10 +19,12 @@ const bird3 = new Fighter('Bird', 25, 12, './images/bird.svg', 1, 7);
 const fighterHtml = new FightersTemplate('fighters');
 fighterHtml.createTemplate(Heracles, bird1);
 
-/** Your code goes here */
-const arena = new Arena(10, [bird1, bird2, bird3], Heracles)
+/** The code from the part one of teh workshop */
+const arena = new Arena(10, [bird1, bird2, bird3], Heracles);
 const ArenaHTML = new ArenaTemplate('arena');
-ArenaHTML.createArena(arena)
+ArenaHTML.createArena(arena);
+
+/** Your code goes Here */
 
 
 /** Do not touch => allow the opening / closing of the hero information section */
